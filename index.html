@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Petualangan Untuk Jihan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+background:linear-gradient(135deg,#FFD8EA,#FFF2F7,#DDF8D8,#B7E8A5);
+
+}
+
+/* Background */
+
+.cloud{
+
+position:absolute;
+
+font-size:60px;
+
+opacity:.5;
+
+animation:cloud 20s linear infinite;
+
+}
+
+.c1{
+
+top:10%;
+left:-150px;
+
+}
+
+.c2{
+
+top:65%;
+left:-250px;
+
+animation-delay:8s;
+
+}
+
+.star{
+
+position:absolute;
+
+font-size:22px;
+
+animation:blink 2s infinite;
+
+}
+
+.s1{top:12%;left:18%;}
+.s2{top:22%;right:18%;}
+.s3{bottom:18%;left:25%;}
+.s4{bottom:15%;right:22%;}
+
+.card{
+
+width:800px;
+
+padding:50px;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(10px);
+
+border-radius:35px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+text-align:center;
+
+animation:fade 1.2s;
+
+}
+
+h1{
+
+font-family:'Fredoka',sans-serif;
+
+font-size:58px;
+
+color:#FF6FAE;
+
+margin-bottom:10px;
+
+}
+
+h2{
+
+color:#72B255;
+
+margin-bottom:25px;
+
+}
+
+p{
+
+font-size:19px;
+
+line-height:34px;
+
+color:#555;
+
+margin-bottom:18px;
+
+}
+
+button{
+
+margin-top:30px;
+
+padding:18px 45px;
+
+font-size:20px;
+
+font-weight:bold;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:linear-gradient(90deg,#FF92C2,#8ED36A);
+
+color:white;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+.footer{
+
+margin-top:35px;
+
+font-size:15px;
+
+color:#888;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:.2;
+
+transform:scale(.8);
+
+}
+
+}
+
+@keyframes cloud{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(1700px);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="cloud c1">☁️</div>
+<div class="cloud c2">☁️</div>
+
+<div class="star s1">✨</div>
+<div class="star s2">✨</div>
+<div class="star s3">🌸</div>
+<div class="star s4">🍵</div>
+
+<div class="card">
+
+<h1>🍵 Pink Matcha Adventure 🌸</h1>
+
+<h2>Special Edition For Jihan Arsellia Laura 💗</h2>
+
+<p>
+
+Haiii Jihan... 👋
+
+Website ini mungkin sederhana.
+
+Nggak dibuat oleh perusahaan besar.
+
+Nggak juga dibuat oleh programmer profesional.
+
+Tapi...
+
+Website ini dibuat khusus untuk seseorang yang spesial.
+
+🥹
+
+</p>
+
+<p>
+
+Di dalamnya ada beberapa tantangan kecil,
+
+beberapa kejutan,
+
+dan satu hadiah di akhir.
+
+Semoga perjalanan kecil ini bisa bikin kamu senyum hari ini.
+
+🌸🍵
+
+</p>
+
+<button onclick="mulai()">
+
+💖 Mulai Petualangan
+
+</button>
+
+<div class="footer">
+
+Made with 🤍 by someone who cares about you.
+
+</div>
+
+</div>
+
+<script>
+
+function mulai(){
+
+document.body.style.opacity="0";
+
+setTimeout(function(){
+
+window.location.href="level1.html";
+
+},800);
+
+}
+
+</script>
+
+</body>
+</html>

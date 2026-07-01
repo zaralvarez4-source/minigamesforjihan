@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Level 2 - Buzz Lightyear</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:linear-gradient(135deg,#87CEEB,#FFD6E7,#D9F8C4);
+
+}
+
+/* Bintang */
+
+.star{
+
+position:absolute;
+font-size:22px;
+animation:blink 2s infinite;
+
+}
+
+.s1{top:10%;left:15%;}
+.s2{top:20%;right:15%;}
+.s3{bottom:15%;left:20%;}
+.s4{bottom:20%;right:18%;}
+
+.card{
+
+width:850px;
+background:white;
+padding:40px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+.progress{
+
+width:100%;
+height:12px;
+background:#eee;
+border-radius:20px;
+overflow:hidden;
+margin-bottom:25px;
+
+}
+
+.bar{
+
+width:66%;
+height:100%;
+background:linear-gradient(90deg,#ff8fb8,#8fd36a);
+
+}
+
+h1{
+
+font-family:'Fredoka',sans-serif;
+color:#ff69b4;
+font-size:45px;
+
+}
+
+#dialog{
+
+margin-top:25px;
+font-size:21px;
+line-height:35px;
+min-height:170px;
+color:#555;
+
+}
+
+button{
+
+margin-top:25px;
+padding:15px 40px;
+border:none;
+border-radius:40px;
+background:#ff69b4;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+
+}
+
+#pilihan{
+
+display:none;
+margin-top:35px;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+
+}
+
+.box{
+
+padding:25px;
+background:#f7f7f7;
+border-radius:20px;
+cursor:pointer;
+font-size:50px;
+transition:.3s;
+
+}
+
+.box:hover{
+
+transform:scale(1.08);
+background:#FFE4EF;
+
+}
+
+#hasil{
+
+margin-top:25px;
+font-size:22px;
+font-weight:bold;
+min-height:40px;
+
+}
+
+#next{
+
+display:none;
+
+}
+
+@keyframes blink{
+
+50%{
+
+opacity:.3;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="star s1">⭐</div>
+<div class="star s2">✨</div>
+<div class="star s3">🌸</div>
+<div class="star s4">🚀</div>
+
+<div class="card">
+
+<div class="progress">
+
+<div class="bar"></div>
+
+</div>
+
+<h1>🚀 LEVEL 2 🚀</h1>
+
+<div id="dialog"></div>
+
+<button id="lanjut" onclick="nextDialog()">
+
+Lanjut ➜
+
+</button>
+
+<div id="pilihan">
+
+<h2 style="color:#72b255;margin-bottom:20px;">
+Pilih minuman favorit Jihan 🍵
+</h2>
+
+<div class="grid">
+
+<div class="box" onclick="salah()">☕</div>
+
+<div class="box" onclick="benar()">🍵</div>
+
+<div class="box" onclick="salah()">🥤</div>
+
+<div class="box" onclick="salah()">🧃</div>
+
+</div>
+
+<div id="hasil"></div>
+
+<button id="next" onclick="location.href='level3.html'">
+
+Lanjut ke Level 3 ➜
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+const dialog=[
+
+"🚀 Halo Jihan! Aku Buzz Lightyear!",
+
+"Aku sedang dalam misi menuju Infinity...",
+
+"Tapi... ada masalah besar nih. 😭",
+
+"Aku kehilangan minuman favorit Jihan!",
+
+"Kalau aku salah bawa minuman, nanti Woody bakal ngeledekin aku. 😂",
+
+"Boleh bantu aku menemukan minuman favorit Jihan?"
+
+];
+
+let i=0;
+
+document.getElementById("dialog").innerHTML=dialog[0];
+
+function nextDialog(){
+
+i++;
+
+if(i<dialog.length){
+
+document.getElementById("dialog").innerHTML=dialog[i];
+
+}else{
+
+document.getElementById("dialog").style.display="none";
+
+document.getElementById("lanjut").style.display="none";
+
+document.getElementById("pilihan").style.display="block";
+
+}
+
+}
+
+function benar(){
+
+document.getElementById("hasil").innerHTML="🎉 Benarrr!!<br><br>Buzz berhasil menemukan Matcha favorit Jihan! 🍵💚<br><br>🚀 To Infinity... and Beyond!!";
+
+document.getElementById("hasil").style.color="green";
+
+document.getElementById("next").style.display="inline-block";
+
+}
+
+function salah(){
+
+document.getElementById("hasil").innerHTML="😂 Yahhh... Buzz malah membawa minuman yang salah. Coba pilih lagi ya!";
+
+document.getElementById("hasil").style.color="crimson";
+
+}
+
+</script>
+
+</body>
+</html>>

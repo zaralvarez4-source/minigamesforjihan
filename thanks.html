@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌸 Thank You</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Poppins;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#87CEEB,#FFD6E7,#D8F8C8);
+overflow:hidden;
+}
+
+.card{
+width:900px;
+background:white;
+padding:60px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:scale(.9);}
+to{opacity:1;transform:scale(1);}
+}
+
+h1{
+font-family:Fredoka;
+font-size:55px;
+color:#ff69b4;
+}
+
+p{
+font-size:22px;
+color:#555;
+line-height:40px;
+margin-top:20px;
+}
+
+.emoji{
+font-size:80px;
+margin:20px 0;
+animation:float 2s infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+}
+
+button{
+margin-top:35px;
+padding:16px 40px;
+border:none;
+border-radius:40px;
+background:#ff69b4;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+small{
+display:block;
+margin-top:20px;
+color:#999;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🌸 Terima Kasih</h1>
+
+<div class="emoji">🚀💗🍵</div>
+
+<p>
+
+Terima kasih sudah memainkan petualangan kecil ini, Jihan. 🤍<br><br>
+
+Dari awal sampai akhir...<br>
+kamu sudah melalui semuanya.<br><br>
+
+Mungkin ini cuma website sederhana,<br>
+tapi setiap halamannya dibuat dengan niat yang baik.<br><br>
+
+Semoga kamu senang, walaupun sedikit saja 😊
+
+</p>
+
+<button onclick="location.href='index.html'">
+🔄 Main Lagi
+</button>
+
+<small>
+To Infinity... and Beyond 🚀
+</small>
+
+</div>
+
+</body>
+</html>

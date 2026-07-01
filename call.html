@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📞 Last Step</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Poppins;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#87CEEB,#FFD6E7,#D8F8C8);
+}
+
+.card{
+width:900px;
+background:white;
+padding:50px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+font-family:Fredoka;
+font-size:50px;
+color:#ff69b4;
+}
+
+#count{
+font-size:90px;
+margin:20px 0;
+color:#6DBE45;
+font-weight:bold;
+}
+
+#text{
+font-size:22px;
+color:#555;
+line-height:38px;
+min-height:150px;
+}
+
+.buttons{
+margin-top:30px;
+display:none;
+}
+
+button{
+padding:16px 40px;
+border:none;
+border-radius:40px;
+font-size:18px;
+cursor:pointer;
+margin:10px;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.yes{
+background:#ff69b4;
+color:white;
+}
+
+.no{
+background:#ddd;
+}
+
+#respon{
+margin-top:25px;
+font-size:22px;
+color:#555;
+line-height:35px;
+font-weight:500;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>📞 Final Step</h1>
+
+<div id="count">3</div>
+
+<div id="text"></div>
+
+<div class="buttons" id="btns">
+
+<button class="yes" onclick="iya()">
+🩷 Mau Dong
+</button>
+
+<button class="no" onclick="tidak()">
+🤍 Nanti Ya
+</button>
+
+</div>
+
+<div id="respon"></div>
+
+</div>
+
+<script>
+
+let c = 3;
+
+let hitung = setInterval(() => {
+
+c--;
+
+if(c > 0){
+document.getElementById("count").innerHTML = c;
+}else{
+clearInterval(hitung);
+document.getElementById("count").innerHTML = "💗";
+
+tampilPesan();
+}
+
+},1000);
+
+function tampilPesan(){
+
+document.getElementById("text").innerHTML = 
+"Kalau boleh jujur...<br><br>"+
+"Aku cuma punya satu permintaan kecil terakhir 🤍<br><br>"+
+"Boleh nggak kita call sekitar 10–15 menit aja?";
+
+document.getElementById("btns").style.display="block";
+
+}
+
+function iya(){
+
+document.getElementById("respon").innerHTML =
+"🥹🩷<br><br>"+
+"Makasih ya Jihan...<br>"+
+"Aku seneng banget.<br><br>"+
+"Aku tunggu kamu ya 🌸";
+
+}
+
+function tidak(){
+
+document.getElementById("respon").innerHTML =
+"🤍<br><br>"+
+"Gapapa kok...<br>"+
+"Aku ngerti 😊<br><br>"+
+"Kalau kamu siap nanti, aku tetap di sini.";
+
+}
+
+</script>
+
+</body>
+</html>

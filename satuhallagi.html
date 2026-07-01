@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satu Hal Lagi...</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:Poppins;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#FFD6E7,#D8F8C8,#87CEEB);
+}
+
+.card{
+width:900px;
+background:white;
+padding:50px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+font-family:Fredoka;
+font-size:50px;
+color:#ff69b4;
+}
+
+#text{
+font-size:22px;
+line-height:38px;
+color:#555;
+min-height:220px;
+margin-top:25px;
+}
+
+button{
+margin-top:25px;
+padding:16px 40px;
+border:none;
+border-radius:40px;
+background:#ff69b4;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#next{
+display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🌸 Satu Hal Lagi...</h1>
+
+<div id="text">
+Kalau boleh jujur...<br><br>
+Ada satu hal kecil yang pengen aku sampaikan.
+</div>
+
+<button id="btn" onclick="nextText()">
+Lanjut ➜
+</button>
+
+<button id="next" onclick="location.href='permintaan.html'">
+💌 Ada Satu Permintaan Kecil
+</button>
+
+</div>
+
+<script>
+
+const teks=[
+"Belakangan ini aku ngerasa ada yang sedikit berubah...",
+"Tapi mungkin itu cuma perasaanku aja.",
+"Aku nggak tau kamu ngerasain hal yang sama atau nggak.",
+"Tapi aku kangen momen kita yang dulu.",
+"Yang bisa ngobrol lama, ketawa hal receh, dan santai aja.",
+"Aku nggak minta semuanya balik seperti dulu...",
+"Tapi kalau bisa, aku cuma pengen kita tetap baik-baik aja.",
+"Dan masih bisa ngobrol seperti biasanya 🤍"
+];
+
+let i=0;
+
+function nextText(){
+
+if(i<teks.length){
+document.getElementById("text").innerHTML=teks[i];
+i++;
+}else{
+document.getElementById("btn").style.display="none";
+document.getElementById("next").style.display="inline-block";
+}
+
+}
+
+</script>
+
+</body>
+</html>
